@@ -1,0 +1,14 @@
+﻿{
+    "$schema": "http://json-schema.org/schemas/2014-11-01/apiapp.json#",
+    "id": "onsparkiy.api",
+    "namespace": "sparkiy.onmicrosoft.com",
+    "gateway": "onsparkiy10e8c15f161c4abaadf4d0141ce426ce",
+    "version": "0.1.0.0",
+    "title": "onsparkiy API",
+    "summary": "onsparkiy API",
+    "author": "Sparkiy",
+    "endpoints": {
+        "apiDefinition": "/swagger/docs/v1",
+        "status": null
+    }
+}

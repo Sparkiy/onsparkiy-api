@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "onsparkiy.api", "onsparkiy.api\onsparkiy.api.csproj", "{847A811E-51DD-43A5-9AE3-5B0C875044CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "onsparkiy.api.DAL", "onsparkiy.api.DAL\onsparkiy.api.DAL.csproj", "{9B919CCA-C401-45F7-A79C-372B744A50CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "onsparkiy.api.Common", "onsparkiy.api.Common\onsparkiy.api.Common.csproj", "{1253C612-0017-4EA0-9BF0-CE92E7E4B4BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{847A811E-51DD-43A5-9AE3-5B0C875044CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{847A811E-51DD-43A5-9AE3-5B0C875044CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{847A811E-51DD-43A5-9AE3-5B0C875044CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{847A811E-51DD-43A5-9AE3-5B0C875044CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B919CCA-C401-45F7-A79C-372B744A50CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B919CCA-C401-45F7-A79C-372B744A50CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B919CCA-C401-45F7-A79C-372B744A50CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B919CCA-C401-45F7-A79C-372B744A50CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1253C612-0017-4EA0-9BF0-CE92E7E4B4BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1253C612-0017-4EA0-9BF0-CE92E7E4B4BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1253C612-0017-4EA0-9BF0-CE92E7E4B4BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1253C612-0017-4EA0-9BF0-CE92E7E4B4BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

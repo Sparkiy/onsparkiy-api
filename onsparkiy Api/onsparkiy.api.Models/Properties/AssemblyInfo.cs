@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("onsparkiy.api.Common")]
-[assembly: AssemblyDescription("onsparkiy API common")]
+[assembly: AssemblyTitle("onsparkiy.api.Models")]
+[assembly: AssemblyDescription("onsparkiy API models")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sparkiy")]
-[assembly: AssemblyProduct("onsparkiy.api.Common")]
+[assembly: AssemblyProduct("onsparkiy.api.Models")]
 [assembly: AssemblyCopyright("Copyright © Sparkiy 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1253c612-0017-4ea0-9bf0-ce92e7e4b4bc")]
+[assembly: Guid("6728d5d2-0aeb-4094-8251-5d7b57564560")]
 
 // Version information for an assembly consists of the following four values:
 //

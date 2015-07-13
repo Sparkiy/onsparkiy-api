@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "onsparkiy.api.DAL", "onspar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "onsparkiy.api.Common", "onsparkiy.api.Common\onsparkiy.api.Common.csproj", "{1253C612-0017-4EA0-9BF0-CE92E7E4B4BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "onsparkiy.api.Models", "onsparkiy.api.Models\onsparkiy.api.Models.csproj", "{6728D5D2-0AEB-4094-8251-5D7B57564560}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1253C612-0017-4EA0-9BF0-CE92E7E4B4BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1253C612-0017-4EA0-9BF0-CE92E7E4B4BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1253C612-0017-4EA0-9BF0-CE92E7E4B4BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6728D5D2-0AEB-4094-8251-5D7B57564560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6728D5D2-0AEB-4094-8251-5D7B57564560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6728D5D2-0AEB-4094-8251-5D7B57564560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6728D5D2-0AEB-4094-8251-5D7B57564560}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -56,7 +56,7 @@ namespace onsparkiy.api
 			// Check if user exist
 			using (var userRepository = new UserRepository())
 			{
-				var user = await userRepository.FindUser(context.UserName, context.Password);
+				var user = await userRepository.FindUserAsync(context.UserName, context.Password);
 				if (user == null)
 				{
 					context.SetError("invalid_grant", "The user name or password is incorrect.");

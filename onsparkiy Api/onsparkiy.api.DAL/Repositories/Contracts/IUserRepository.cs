@@ -15,7 +15,7 @@ namespace onsparkiy.api.DAL.Repositories.Contracts
 		/// <param name="username">The username.</param>
 		/// <param name="password">The password.</param>
 		/// <returns>Returns user instance that matches given authentication data.</returns>
-		Task<User> FindUser(string username, string password);
+		Task<User> FindUserAsync(string username, string password);
 
 		/// <summary>
 		/// Registers the user.
@@ -23,5 +23,12 @@ namespace onsparkiy.api.DAL.Repositories.Contracts
 		/// <param name="account">The account.</param>
 		/// <returns>Returns result of identity storage create call.</returns>
 		Task<IdentityResult> RegisterUserAsync(AccountViewModel account);
+
+		/// <summary>
+		/// Checks if user with given username already exists.
+		/// </summary>
+		/// <param name="username">The username.</param>
+		/// <returns>Returns <c>True</c> if user with given username already exists; <c>False</c> otherwise.</returns>
+		Task<bool> ExistsAsync(string username);
 	}
 }

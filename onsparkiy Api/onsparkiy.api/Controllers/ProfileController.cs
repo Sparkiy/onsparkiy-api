@@ -7,6 +7,9 @@ using onsparkiy.api.DAL.Repositories;
 
 namespace onsparkiy.api.Controllers
 {
+	/// <summary>
+	/// Profile API controller.
+	/// </summary>
 	[Authorize]
     public class ProfileController : ApiController
 	{
@@ -22,6 +25,10 @@ namespace onsparkiy.api.Controllers
 		}
 
 
+		/// <summary>
+		/// Gets the profile for current user.
+		/// </summary>
+		/// <returns></returns>
 		public async Task<IHttpActionResult> Get()
 		{
 			var principal = Request.GetRequestContext().Principal as ClaimsPrincipal;

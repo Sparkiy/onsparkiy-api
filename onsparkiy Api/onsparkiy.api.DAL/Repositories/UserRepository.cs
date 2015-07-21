@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.Validation;
 using System.Diagnostics.Contracts;
 using System.Linq;
@@ -65,7 +66,7 @@ namespace onsparkiy.api.DAL.Repositories
 		/// <param name="username">The username.</param>
 		/// <param name="password">The password.</param>
 		/// <returns>Returns user instance that matches given authentication data.</returns>
-		public async Task<User> FindUser(string username, string password)
+		public async Task<User> FindUserAsync(string username, string password)
 		{
 			if (String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
 				return null;
@@ -94,6 +95,19 @@ namespace onsparkiy.api.DAL.Repositories
 			var result = await this.UserManager.CreateAsync(user, account.Password);
 
 			return result;
+		}
+
+		/// <summary>
+		/// Checks if user with given username already exists.
+		/// </summary>
+		/// <param name="username">The username.</param>
+		/// <returns>Returns <c>True</c> if user with given username already exists; <c>False</c> otherwise.</returns>
+		public async Task<bool> ExistsAsync(string username)
+		{
+			if (string.IsNullOrEmpty(username))
+				return false;
+
+			return await this.UserManager.Users.AnyAsync(u => u.UserName.Equals(username));
 		}
 
 		/// <summary>

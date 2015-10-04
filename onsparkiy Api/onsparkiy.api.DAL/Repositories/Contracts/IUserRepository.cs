@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
+using onsparkiy.api.DAL.Models;
 using onsparkiy.api.Models;
 
 namespace onsparkiy.api.DAL.Repositories.Contracts

@@ -1,15 +1,15 @@
 ﻿using System.Threading.Tasks;
 using System.Web.Http;
 using Microsoft.AspNet.Identity;
+using onsparkiy.api.DAL.Models;
 using onsparkiy.api.DAL.Repositories;
-using onsparkiy.api.Models;
 
 namespace onsparkiy.api.Controllers
 {
 	/// <summary>
 	/// Account controller.
 	/// </summary>
-    public class AccountController : ApiController
+	public class AccountController : ApiController
 	{
 		private readonly UserRepository userRepository;
 

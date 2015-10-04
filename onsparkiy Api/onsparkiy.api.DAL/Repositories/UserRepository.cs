@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.Entity.Validation;
-using System.Diagnostics.Contracts;
-using System.Linq;
-using System.Net;
-using System.Text;
 using System.Threading.Tasks;
-using System.Web.Http;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using onsparkiy.api.DAL.Contexts;
-using onsparkiy.api.DAL.Contexts.Contracts;
+using onsparkiy.api.DAL.Models;
 using onsparkiy.api.DAL.Repositories.Contracts;
 using onsparkiy.api.Models;
 

@@ -3,7 +3,6 @@ using System.Net.Http.Formatting;
 using System.Web.Http;
 using Newtonsoft.Json.Serialization;
 using onsparkiy.api.Common.DI;
-using Swashbuckle.Application;
 
 namespace onsparkiy.api
 {
@@ -11,22 +10,22 @@ namespace onsparkiy.api
 	/// WebAPI configuration.
 	/// </summary>
 	public static class WebApiConfig
-    {
+	{
 		/// <summary>
 		/// Registers the specified configuration.
 		/// </summary>
 		/// <param name="config">The configuration.</param>
 		public static void Register(HttpConfiguration config)
-        {
+		{
 			// Register dependency injection
 			//RegisterDI(config);
 
-            // Json formatting
+			// Json formatting
 			RegisterJson(config);
 
 			// Web API routes
 			RegisterRoutes(config);
-        }
+		}
 
 		/// <summary>
 		/// Registers the json serialization and deserialization.
@@ -59,12 +58,12 @@ namespace onsparkiy.api
 		/// </summary>
 		/// <param name="config">The configuration.</param>
 		private static void RegisterDI(HttpConfiguration config)
-	    {
+		{
 			// Configure DI container
 			var container = new DependencyContainer();
 
 			// Assign dependency resolver to configuration
 			config.DependencyResolver = new DependencyResolver(container);
 		}
-    }
+	}
 }

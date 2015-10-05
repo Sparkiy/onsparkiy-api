@@ -48,13 +48,13 @@ namespace onsparkiy.api.Controllers
 		/// <param name="username">The username.</param>
 		/// <returns>Returns <c>True</c> if given username already exists; <c>False</c> otherwise.</returns>
 		[AllowAnonymous]
-		public async Task<bool> UsernameExists(string username)
+		public async Task<IHttpActionResult> UsernameExists(string username)
 		{
 			// Check if username is valid
 			if (string.IsNullOrEmpty(username))
-				return false;
+				return Ok(true);
 
-			return await this.userRepository.ExistsAsync(username);
+			return Ok(await this.userRepository.ExistsAsync(username));
 		}
 
 		/// <summary>

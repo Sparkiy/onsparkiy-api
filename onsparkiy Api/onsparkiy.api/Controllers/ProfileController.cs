@@ -11,7 +11,7 @@ namespace onsparkiy.api.Controllers
 	/// Profile API controller.
 	/// </summary>
 	[Authorize]
-    public class ProfileController : ApiController
+	public class ProfileController : ApiController
 	{
 		private readonly ProfileRepository profileRepository;
 
@@ -39,5 +39,5 @@ namespace onsparkiy.api.Controllers
 
 			return Ok(await this.profileRepository.GetProfileAsync(userName));
 		}
-    }
+	}
 }

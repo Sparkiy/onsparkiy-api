@@ -3,8 +3,10 @@ using System.Data.Entity;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin;
+using Microsoft.Owin.Cors;
 using Microsoft.Owin.Security.Infrastructure;
 using Microsoft.Owin.Security.OAuth;
 using onsparkiy.api.DAL.Contexts;
@@ -28,9 +30,9 @@ namespace onsparkiy.api
 			var config = new HttpConfiguration();
 
 			// Configure OAuth
-			ConfigureOAuth(app);
+			this.ConfigureOAuth(app);
 
-			// Configure WebAPI
+			// Configure WebAPI and Enable CORS with onsparkiy
 			WebApiConfig.Register(config);
 			app.UseWebApi(config);
 

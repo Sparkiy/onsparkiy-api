@@ -31,6 +31,7 @@ namespace onsparkiy.api
 
 			// Enable CORS
 			config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
+			app.UseCors(CorsOptions.AllowAll);
 
 			// Configure OAuth
 			this.ConfigureOAuth(app);

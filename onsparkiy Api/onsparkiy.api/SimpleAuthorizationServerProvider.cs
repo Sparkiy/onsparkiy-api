@@ -86,6 +86,9 @@ namespace onsparkiy.api
 			// Create authentication ticket
 			var ticket = new AuthenticationTicket(identity, props);
 
+			// Allow CORS
+			context.OwinContext.Set("as:clientAllowedOrigin", "https://onsparkiy.com");
+
 			// Validate ticket to the context
 			context.Validated(identity);
 		}
@@ -123,6 +126,9 @@ namespace onsparkiy.api
 
 			// Clone ticket
 			var newTicket = new AuthenticationTicket(newIdentity, context.Ticket.Properties);
+
+			// Allow CORS
+			context.OwinContext.Set("as:clientAllowedOrigin", "https://onsparkiy.com");
 
 			// Validate ticket to the context
 			context.Validated(newTicket);

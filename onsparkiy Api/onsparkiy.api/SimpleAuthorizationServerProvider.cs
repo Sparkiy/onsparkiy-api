@@ -29,10 +29,7 @@ namespace onsparkiy.api
 		public override Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
 		{
 			// To add client auth, see: https://github.com/tjoudeh/AngularJSAuthentication/blob/master/AngularJSAuthentication.API/Providers/SimpleAuthorizationServerProvider.cs#L19
-
-			// Allow CORS
-			context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
-
+			
 			// All clients are valid
 			context.Validated();
 
@@ -56,9 +53,6 @@ namespace onsparkiy.api
 		/// </returns>
 		public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
 		{
-			// Allow CORS
-			context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
-
 			// Check if user exist
 			using (var userRepository = new UserRepository())
 			{
@@ -111,9 +105,6 @@ namespace onsparkiy.api
 		/// </returns>
 		public override Task GrantRefreshToken(OAuthGrantRefreshTokenContext context)
 		{
-			// Allow CORS
-			context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
-
 			// Change auth ticket for refresh token requests
 			var newIdentity = new ClaimsIdentity(context.Ticket.Identity);
 

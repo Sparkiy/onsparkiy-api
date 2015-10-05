@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using System.Web.Http;
 using Microsoft.AspNet.Identity;
 using onsparkiy.api.DAL.Models;
@@ -54,7 +55,14 @@ namespace onsparkiy.api.Controllers
 			if (string.IsNullOrEmpty(username))
 				return Ok(true);
 
-			return Ok(await this.userRepository.ExistsAsync(username));
+			try
+			{
+				return Ok(await this.userRepository.ExistsAsync(username));
+			}
+			catch (Exception ex)
+			{
+				return BadRequest("Failed to check if user name \"" + username + "\" already exists. Consider it taken. Error message: " + ex.Message);
+			}
 		}
 
 		/// <summary>

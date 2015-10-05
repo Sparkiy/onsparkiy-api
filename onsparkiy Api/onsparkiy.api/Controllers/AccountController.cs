@@ -45,33 +45,6 @@ namespace onsparkiy.api.Controllers
 		}
 
 		/// <summary>
-		/// Checks if given username already exists.
-		/// </summary>
-		/// <param name="username">The username.</param>
-		/// <returns>Returns <c>True</c> if given username already exists; <c>False</c> otherwise.</returns>
-		[HttpPost]
-		[AllowAnonymous]
-		public async Task<IHttpActionResult> UsernameExists([FromBody] string username)
-		{
-			// Validate view model
-			if (!ModelState.IsValid)
-				return BadRequest(ModelState);
-
-			// Check if username is valid
-			if (string.IsNullOrEmpty(username))
-				return BadRequest("username is empty.");
-
-			try
-			{
-				return Ok(await this.userRepository.ExistsAsync(username));
-			}
-			catch (Exception ex)
-			{
-				return BadRequest("Failed to check if user name \"" + username + "\" already exists. Consider it taken. Error message: " + ex.Message);
-			}
-		}
-
-		/// <summary>
 		/// Gets the error result.
 		/// </summary>
 		/// <param name="result">The result.</param>

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Net.Http;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace onsparkiy.api.Controllers
 	public class ProfileController : ApiController
 	{
 		private readonly ProfileRepository profileRepository;
+		private readonly UserRepository userRepository;
 
 
 		/// <summary>
@@ -22,6 +24,7 @@ namespace onsparkiy.api.Controllers
 		public ProfileController()
 		{
 			this.profileRepository = new ProfileRepository();
+			this.userRepository = new UserRepository();
 		}
 
 

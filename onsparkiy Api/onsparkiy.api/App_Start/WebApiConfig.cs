@@ -52,6 +52,11 @@ namespace onsparkiy.api
 				routeTemplate: "{controller}/{id}",
 				defaults: new { id = RouteParameter.Optional }
 			);
+			config.Routes.MapHttpRoute(
+				name: "ActionApi",
+				routeTemplate: "{controller}/{action}/{id}",
+				defaults: new { id = RouteParameter.Optional }
+			);
 		}
 
 		/// <summary>

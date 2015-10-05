@@ -165,8 +165,6 @@
     <Content Include="appapi.json" />
     <Content Include="Metadata\deploymentTemplates\apiappconfig.azureresource.json" />
     <Content Include="onsparkiy.api.ruleset" />
-    <None Include="Properties\PublishProfiles\onsparkiy-api - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\onsparkiy-api - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -176,6 +174,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\onsparkiy.api.Common\onsparkiy.api.Common.csproj">

@@ -30,6 +30,9 @@ namespace onsparkiy.api
 		{
 			// To add client auth, see: https://github.com/tjoudeh/AngularJSAuthentication/blob/master/AngularJSAuthentication.API/Providers/SimpleAuthorizationServerProvider.cs#L19
 
+			// Allow CORS
+			context.OwinContext.Set("as:clientAllowedOrigin", "https://*.onsparkiy.com/");
+
 			// All clients are valid
 			context.Validated();
 

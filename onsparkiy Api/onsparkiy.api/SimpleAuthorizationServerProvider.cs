@@ -30,9 +30,6 @@ namespace onsparkiy.api
 		{
 			// To add client auth, see: https://github.com/tjoudeh/AngularJSAuthentication/blob/master/AngularJSAuthentication.API/Providers/SimpleAuthorizationServerProvider.cs#L19
 
-			// Allow CORS
-			context.OwinContext.Set("as:clientAllowedOrigin", "https://onsparkiy.com");
-
 			// All clients are valid
 			context.Validated();
 
@@ -87,7 +84,7 @@ namespace onsparkiy.api
 			var ticket = new AuthenticationTicket(identity, props);
 
 			// Allow CORS
-			context.OwinContext.Set("as:clientAllowedOrigin", "https://onsparkiy.com");
+			context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
 
 			// Validate ticket to the context
 			context.Validated(identity);
@@ -128,7 +125,7 @@ namespace onsparkiy.api
 			var newTicket = new AuthenticationTicket(newIdentity, context.Ticket.Properties);
 
 			// Allow CORS
-			context.OwinContext.Set("as:clientAllowedOrigin", "https://onsparkiy.com");
+			context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
 
 			// Validate ticket to the context
 			context.Validated(newTicket);

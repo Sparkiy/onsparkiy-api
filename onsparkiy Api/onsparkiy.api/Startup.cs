@@ -29,6 +29,9 @@ namespace onsparkiy.api
 		{
 			var config = new HttpConfiguration();
 
+			// Enable CORS
+			config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
+
 			// Configure OAuth
 			this.ConfigureOAuth(app);
 

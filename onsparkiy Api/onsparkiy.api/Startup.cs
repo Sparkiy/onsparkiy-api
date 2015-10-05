@@ -29,6 +29,10 @@ namespace onsparkiy.api
 		{
 			var config = new HttpConfiguration();
 
+			// Enable CORS
+			config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
+			app.UseCors(CorsOptions.AllowAll);
+
 			// Configure OAuth
 			this.ConfigureOAuth(app);
 
@@ -51,7 +55,7 @@ namespace onsparkiy.api
 				AllowInsecureHttp = true,
 				TokenEndpointPath = new PathString("/token"),
 				AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
-				Provider =  new SimpleAuthorizationServerProvider()
+				Provider = new SimpleAuthorizationServerProvider()
 			};
 
 			// Token Generation

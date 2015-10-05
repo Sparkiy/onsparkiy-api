@@ -28,6 +28,7 @@ namespace onsparkiy.api.Controllers
 		/// Registers the specified account.
 		/// </summary>
 		/// <param name="account">The account.</param>
+		[HttpPost]
 		[AllowAnonymous]
 		public async Task<IHttpActionResult> Register(AccountViewModel account)
 		{
@@ -48,6 +49,7 @@ namespace onsparkiy.api.Controllers
 		/// </summary>
 		/// <param name="username">The username.</param>
 		/// <returns>Returns <c>True</c> if given username already exists; <c>False</c> otherwise.</returns>
+		[HttpPost]
 		[AllowAnonymous]
 		public async Task<IHttpActionResult> UsernameExists(string username)
 		{

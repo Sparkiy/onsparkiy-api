@@ -51,11 +51,15 @@ namespace onsparkiy.api.Controllers
 		/// <returns>Returns <c>True</c> if given username already exists; <c>False</c> otherwise.</returns>
 		[HttpPost]
 		[AllowAnonymous]
-		public async Task<IHttpActionResult> UsernameExists(string username)
+		public async Task<IHttpActionResult> UsernameExists([FromBody] string username)
 		{
+			// Validate view model
+			if (!ModelState.IsValid)
+				return BadRequest(ModelState);
+
 			// Check if username is valid
 			if (string.IsNullOrEmpty(username))
-				return Ok(true);
+				return BadRequest("username is empty.");
 
 			try
 			{
